@@ -3,8 +3,124 @@ body {
          and use the OS’s UI font as the website font
        */
     font: 100%/1.5 system-ui;
+    max-width: 100ch;
+    margin-inline: max(1em, (100% - 100ch) / 2);
   }
 img {
     width: 300px;
     height: auto; /* changed img scaling to not block the entire website*/
  }
+:root {
+  --color-accent: oklch(65% 50% 0);
+}
+
+nav ul,
+nav li {
+  display: contents;
+}
+
+nav {
+  display: flex;
+  margin-bottom: 1em;
+  border-bottom: 1px solid oklch(80% 3% 200);
+}
+
+nav a {
+  flex: 1;
+  text-align: center;
+  padding: 0.5em;
+  text-decoration: none;
+  color: inherit;
+}
+
+nav a.current {
+  border-bottom: 0.4em solid oklch(80% 3% 200);
+  padding-bottom: calc(0.5em - 0.4em);
+}
+
+nav a:hover {
+  border-bottom: 0.4em solid var(--color-accent);
+  background-color: oklch(from var(--color-accent) 95% 5% h);
+}
+
+form input,
+form textarea,
+form button,
+form label {
+  font: inherit;
+}
+
+/* Turn the form into a grid container */
+form {
+  display: grid;
+  grid-template-columns: auto 1fr; /* Two columns: auto fits the label, 1fr for the control */
+  gap: 1em; /* Spacing between rows and columns */
+  align-items: center; /* Align grid items vertically */
+}
+
+/* Flatten labels so their content is placed directly into the grid */
+form label {
+  display: contents;
+}
+
+/* Make inputs and textareas take full width available in their grid cell */
+form input,
+form textarea {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Have the submit button span both columns for a centered, full-width look */
+form button {
+  grid-column: 1 / -1;
+}
+
+/* Responsive grid for projects */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+  gap: 1em;
+}
+
+/* Each article as a grid with subgrid for row alignment */
+.projects article {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 3;
+  gap: 0.5em;
+}
+
+.projects article h2 {
+  margin: 0;
+}
+
+/* Finishing touches on headings */
+h1 {
+  font-size: 400%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+.resume-page .resume-container {
+  max-width: 60ch;
+  margin: 0 auto;
+  padding: 2em 1em;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.resume-page header h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin: 1em 0;
+}
+
+.resume-page section > h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5em;
+  padding-bottom: 0.25em;
+  border-bottom: 1px solid #e0e0e0;
+}

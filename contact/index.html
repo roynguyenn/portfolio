@@ -1,29 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+  <!-- Adjust the href to point to your shared stylesheet -->
+  <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-    <h1>Contact</h1>
-    <nav>
-        <a href= "../index.html">Home</a>
-        <a href= "../projects/index.html">Projects</a>
-        <a href = "index.html">Contact</a>
-        <a href= "../resume/index.html">Resume</a>
-        <a href = "https://github.com/roynguyenn" target = "_blank">My Github</a>
-    </nav>
-    <form action = "mailto:roycenguyen1111@gmail.com" method = "POST" enctype = "text/plain">
-        <label>Email</label>
-        <input name = "email" type = "email">
-        <label>Subject</label>
-        <input name = "subject">
-        <label>Body</label>
-        <textarea name = "body">
-        </textarea> 
-        <button>Submit</button>
-    </form>
-    
+  <!-- Main Navigation -->
+  <nav>
+    <a href="../index.html">Home</a>
+    <a href="../projects/index.html">Projects</a>
+    <a class="current" href="index.html">Contact</a>
+    <a href="../resume/index.html">Resume</a>
+    <a href="https://github.com/roynguyenn" target="_blank">My Github</a>
+  </nav>
+
+  <!-- Page Content -->
+  <h1>Contact</h1>
+  <form action="mailto:roycenguyen1111@gmail.com" method="POST" enctype="text/plain">
+    <label>Email</label>
+    <input name="email" type="email">
+    <label>Subject</label>
+    <input name="subject">
+    <label>Body</label>
+    <textarea name="body"></textarea>
+    <button>Submit</button>
+  </form>
 </body>
 </html>
