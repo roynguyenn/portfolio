@@ -13,10 +13,18 @@ const pages = [
     { url: 'https://github.com/roynguyenn', title: 'My GitHub' },
   ];
   
-  const BASE_PATH = (location.hostname === 'localhost' ||
-    location.hostname === '127.0.0.1')
-? '/'
-: '/portfolio/';
+  const isLocal = ['localhost','127.0.0.1']
+  .includes(location.hostname);
+
+// Split off the first path segment as the repo name when not local
+const segments = location.pathname.split('/').filter(Boolean);
+// e.g. "/portfolio/index.html" → ["portfolio","index.html"]
+const repoName = isLocal ? '' : segments[0] || '';
+
+// Build BASE_PATH accordingly
+const BASE_PATH = isLocal
+  ? '/'
+  : `/${repoName}/`;
 
 const nav = document.createElement('nav');
 document.body.prepend(nav);
