@@ -13,10 +13,10 @@ const pages = [
   { url: 'https://github.com/roynguyenn', title: 'My GitHub' },
 ];
 
-const BASE_PATH = (location.hostname === 'localhost'
-                 || location.hostname === '127.0.0.1')
-  ? '/'
-  : '/website/';  // <-- your GitHub Pages repo name
+const BASE_PATH = (location.hostname === 'localhost' ||
+    location.hostname === '127.0.0.1')
+? '/'
+: '/portfolio/';  
 
 const nav = document.createElement('nav');
 document.body.prepend(nav);
