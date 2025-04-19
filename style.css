@@ -1,3 +1,10 @@
+html {
+  color-scheme: light dark;
+  
+  /* (optional) use the system canvas colors for BG and text */
+  background: canvas;
+  color: canvastext;
+}
 body {
     /* Set line height to 1.5 times the font size
          and use the OS’s UI font as the website font
@@ -22,7 +29,8 @@ nav li {
 nav {
   display: flex;
   margin-bottom: 1em;
-  border-bottom: 1px solid oklch(80% 3% 200);
+  --border-color: oklch(50% 10% 200 / 40%);
+  border-bottom: 1px solid var(--border-color);
 }
 
 nav a {
@@ -40,7 +48,7 @@ nav a.current {
 
 nav a:hover {
   border-bottom: 0.4em solid var(--color-accent);
-  background-color: oklch(from var(--color-accent) 95% 5% h);
+  background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
 }
 
 form input,
@@ -123,4 +131,17 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0.5em;
   padding-bottom: 0.25em;
   border-bottom: 1px solid #e0e0e0;
+}
+.color-scheme {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 0.8em;      /* make it a bit smaller */
+  font-family: inherit;  /* match the rest of your site */
+  color: inherit;        /* ensure it follows your canvastext color */
+}
+
+/* make sure the dropdown itself inherits the same font */
+.color-scheme select {
+  font: inherit;
 }

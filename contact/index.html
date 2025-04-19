@@ -9,24 +9,21 @@
 </head>
 <body>
   <!-- Main Navigation -->
-  <nav>
-    <a href="../index.html">Home</a>
-    <a href="../projects/index.html">Projects</a>
-    <a class="current" href="index.html">Contact</a>
-    <a href="../resume/index.html">Resume</a>
-    <a href="https://github.com/roynguyenn" target="_blank">My Github</a>
-  </nav>
+  
 
   <!-- Page Content -->
   <h1>Contact</h1>
-  <form action="mailto:roycenguyen1111@gmail.com" method="POST" enctype="text/plain">
-    <label>Email</label>
-    <input name="email" type="email">
-    <label>Subject</label>
-    <input name="subject">
-    <label>Body</label>
-    <textarea name="body"></textarea>
-    <button>Submit</button>
+  <form action="mailto:roycenguyen1111@gmail.com" method="GET">
+    <label>
+      Subject:
+      <input type="text" name="subject">
+    </label>
+    <label>
+      Message:
+      <textarea name="body"></textarea>
+    </label>
+    <button type="submit">Send</button>
   </form>
+  <script type="module" src="../global.js"></script>
 </body>
 </html>
