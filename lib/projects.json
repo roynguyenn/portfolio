@@ -2,31 +2,31 @@
     {
         "title": "League of Legends Tower Analysis",
         "year": 2025,
-        "image": "/images/league.png",
+        "image": "images/league.png",
         "description": "Deep dive in statistical League of Legends tower analysis data. See how the impacts of toweres on the game change over time."
     },
     {
         "title": "Does National Debt Determine Quality of Life?",
         "year": 2025,
-        "image": "/images/cogs108.png",
+        "image": "images/cogs108.png",
         "description": "How does a nation's debt impact the quality of life of its citizens? This project aims to analyze the correlation between national debt and quality of life indicators."
     },
     {
         "title": "Bullet Hell Game",
         "year": 2024,
-        "image": "/images/bullethell.png",
+        "image": "images/bullethell.png",
         "description": "A bullet hell game where the player must dodge a barrage of bullets while trying to defeat enemies. The game features multiple levels, power-ups, and challenging boss fights. Created in unity and C#."
     },
     {
         "title": "LetterGen",
         "year": 2024,
-        "image": "/images/prompt.png",
+        "image": "images/prompt.png",
         "description": "How might chatGPT be used to generate personalized and tailored letters for different occasions? This project explores the prompting process and the results of using chatGPT to generate letters."
     },
     {
         "title": "Grocery Store Visualization",
         "year": 2025,
-        "image": "/images/grocerystore.png",
+        "image": "images/grocerystore.png",
         "description": "What makes an effective visualization of where to buy your groceries? This project goes through the process of creating an effective visualization comparing different grocery stores and their prices."
     },
     {
