@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   console.log('🚀 projects.js running');
 
   // 1) Load your projects data
-  const projects = await fetchJSON('/lib/projects.json');
+  const projects = await fetchJSON('lib/projects.json');
   console.log('📦 fetched projects:', projects);
 
   // 2) Update the heading count
