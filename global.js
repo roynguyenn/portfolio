@@ -115,3 +115,37 @@ form?.addEventListener('submit', event => {
   // Go there!
   location.href = mailtoURL;
 });
+
+export async function fetchJSON(url) {
+  try {
+    const response = await fetch(url);
+    console.log('🛰️ [fetchJSON] response object:', response);
+    if (!response.ok) {
+      throw new Error(`Failed to fetch ${url}: ${response.status} ${response.statusText}`);
+    }
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    return [];
+  }
+}
+
+
+export function renderProjects(projects, containerElement, headingLevel = 'h2') {
+  containerElement.innerHTML = '';
+  projects.forEach(({ title, image, description }) => {
+    const article = document.createElement('article');
+    article.innerHTML = `
+      <${headingLevel}>${title}</${headingLevel}>
+      <img src="${image}" alt="${title}" />
+      <p>${description}</p>
+    `;
+    containerElement.appendChild(article);
+  });
+}
+
+export async function fetchGitHubData(username) {
+  // return statement here
+  return fetchJSON(`https://api.github.com/users/${username}`);
+}
+

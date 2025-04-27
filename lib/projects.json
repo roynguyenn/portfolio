@@ -1,0 +1,67 @@
+[
+    {
+        "title": "League of Legends Tower Analysis",
+        "year": 2025,
+        "image": "/images/league.png",
+        "description": "Deep dive in statistical League of Legends tower analysis data. See how the impacts of toweres on the game change over time."
+    },
+    {
+        "title": "Does National Debt Determine Quality of Life?",
+        "year": 2025,
+        "image": "/images/cogs108.png",
+        "description": "How does a nation's debt impact the quality of life of its citizens? This project aims to analyze the correlation between national debt and quality of life indicators."
+    },
+    {
+        "title": "Bullet Hell Game",
+        "year": 2024,
+        "image": "/images/bullethell.png",
+        "description": "A bullet hell game where the player must dodge a barrage of bullets while trying to defeat enemies. The game features multiple levels, power-ups, and challenging boss fights. Created in unity and C#."
+    },
+    {
+        "title": "LetterGen",
+        "year": 2024,
+        "image": "/images/prompt.png",
+        "description": "How might chatGPT be used to generate personalized and tailored letters for different occasions? This project explores the prompting process and the results of using chatGPT to generate letters."
+    },
+    {
+        "title": "Grocery Store Visualization",
+        "year": 2025,
+        "image": "/images/grocerystore.png",
+        "description": "What makes an effective visualization of where to buy your groceries? This project goes through the process of creating an effective visualization comparing different grocery stores and their prices."
+    },
+    {
+        "title": "Illo fugiat alias enim.",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Rerum sequi quia dolor maiores, labore, alias sit dolore illum excepturi nulla, ratione nihil. Commodi labore repellendus impedit repudiandae nemo voluptatem quod nisi harum mollitia dolor, eveniet qui, saepe fugit."
+    },
+    {
+        "title": "Nobis non repudiandae ipsum!",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Aperiam nobis hic, minima alias iusto iste laborum? Tenetur autem minus, quidem reprehenderit, dolore possimus, sed illo atque cumque illum quis nam tempora ex magnam dicta cupiditate fuga magni est."
+    },
+    {
+        "title": "Repudiandae qui deleniti quia?",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Blanditiis facilis omnis eaque magni dicta velit enim sint rerum fuga provident dolorem numquam possimus hic, iste incidunt dolorum ducimus qui illo maiores doloremque asperiores nesciunt quidem voluptatem nemo. Consequuntur!"
+    },
+    {
+        "title": "Neque quibusdam numquam blanditiis.",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Expedita sequi fugit at quo dolores voluptate nulla aliquid nemo! Molestiae id quam provident blanditiis veniam, similique ab eligendi cumque iure, ipsum ullam est pariatur praesentium vel reiciendis culpa deleniti!"
+    },
+    {
+        "title": "Dicta deserunt numquam eius.",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Ut placeat nulla autem tempora, ratione maxime minima beatae quae tempore, rerum alias assumenda facere similique! Minus libero ratione magni, accusamus beatae deserunt nobis, natus at nam quas voluptate odit."
+    },
+    {
+        "title": "Consequuntur consequatur laboriosam libero?",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Possimus odit suscipit expedita est accusamus aliquid eum eos perspiciatis quidem, numquam porro quae, veniam maxime reprehenderit quod sed perferendis quibusdam. Assumenda nesciunt asperiores quidem quam tempore. Dicta, perferendis sit!"
+    },
+    {
+        "title": "Laboriosam sapiente reiciendis dolorem.",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Suscipit eligendi asperiores autem sint praesentium magni magnam cum nisi sapiente nobis, eaque velit unde fugit! Quibusdam iste qui accusamus iusto? Et veniam delectus tempore repellat rem sequi similique distinctio?"
+    }
+]
