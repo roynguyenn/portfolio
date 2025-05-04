@@ -145,3 +145,233 @@ h1, h2, h3, h4, h5, h6 {
 .color-scheme select {
   font: inherit;
 }
+/* ensure the wrapper spans its own grid row and stacks its children */
+.project-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25em;        /* small space between description & year */
+  margin-top: 0.5em;  /* space above this block */
+}
+
+/* optional fine-tuning */
+.project-description {
+  margin: 0;
+}
+.project-year {
+  margin: 0;
+  color: #666;
+  font-size: 0.9rem;
+  font-family: Baskerville, serif;
+  font-variant-numeric: oldstyle-nums;
+}
+
+/* assuming your container has id="projects" */
+#projects {
+  display: grid;
+  /* e.g. two columns, auto-fill style—adjust to your desired layout */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;     /* ← space between both rows and columns */
+  margin: 2rem 0;  /* optional spacing above/below the whole grid */
+}
+
+/* style each card */
+#projects article {
+  background: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  /* optional drop-shadow or border if you like */
+}
+
+/* 1) Use the same selector your HTML actually has */
+.projects {
+  display: grid;
+  /* auto‐fill as many 15em cards per row as will fit */
+  grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+  gap: 1.5rem;       /* space between cards, both rows & cols */
+  margin: 2rem 0;    /* optional breathing room above/below */
+}
+
+/* 2) Simplify each card: no forced row‐span or subgrid */
+.projects article {
+  background: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  /* no grid-row or subgrid needed—let gap handle everything */
+  display: flex;
+  flex-direction: column;
+  gap: 0.75em;       /* space between elements inside the card */
+}
+/* 1) Your projects container is already a grid—make sure items stretch */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+  gap: 1.5rem;
+  align-items: stretch;    /* <-- this makes every <article> fill its row height */
+}
+
+/* 2) Each card becomes a column-flex box so we can space things vertically */
+.projects article {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;  /* <-- pushes footer (year) to the bottom */
+  background: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+/* 3) Force every image into the same aspect-box */
+.projects article img {
+  width: 100%;
+  height: 10rem;          /* pick a height that works for you */
+  object-fit: cover;      /* crop/scale to fill the box */
+  border-radius: 0.25rem; /* optional, match your card style */
+  flex-shrink: 0;         /* don’t let flexbox squash the image */
+  margin-bottom: 0.5rem;
+}
+
+/* 4) Make sure your text container grows to push footer down */
+.project-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25em;
+  flex-grow: 1;           /* <-- this makes the description block fill the space between image and year */
+}
+
+/* 5) Tidy up margins on the paragraphs */
+.project-description,
+.project-year {
+  margin: 0;
+}
+
+/* 1) Wrap your <img> in a fixed-ratio box */
+.projects article {
+  /* …existing flex setup… */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.projects article .img-wrapper {
+  width: 100%;
+  aspect-ratio: 16 / 9;    /* pick your desired ratio */
+  overflow: hidden;
+  border-radius: 0.25rem;  /* optional, for rounded corners */
+  flex-shrink: 0;
+  margin-bottom: 0.5rem;
+}
+
+/* 2) Make the image fill that box without distortion */
+.projects article .img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;       /* crops to fill, no stretching */
+  display: block;
+}
+
+/* container for all stats */
+#profile-stats {
+  margin: 2rem 0;
+  /* optional: give it a background/card feel */
+  background: canvas;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+/* make dt/dd line up in two columns */
+#profile-stats dl {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.5rem 1.5rem;      /* row-gap col-gap */
+  align-items: center;
+}
+
+/* labels (dt) styling */
+#profile-stats dt {
+  font-weight: 600;
+  color: #444;             /* dark gray */
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+/* values (dd) styling */
+#profile-stats dd {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #000;
+}
+
+/* if you’d like each stat in its own “card” */
+#profile-stats dl > * {
+  padding: 0.25rem 0;
+}
+
+#projects-pie-plot {
+  max-width: 20em;
+  margin-block: 2em;
+
+  overflow: visible;
+}
+/* 1) Legend container: auto-fill grid of items */
+.legend {
+  display: flex;           /* lay items out in a row */
+  flex-wrap: nowrap;       /* prevent wrapping onto a new line */
+  justify-content: space-between; /* spread them evenly across the row */
+  align-items: center;     /* vertically center swatch + text */
+  padding: 0;
+  margin: 2em 0;
+  list-style: none;
+  gap: 1em;               /* small space between swatch and text */
+}
+
+
+/* 2) Each legend item: flex row, centered vertically */
+.legend li {
+  flex: 1;                 /* each item takes up equal share of the width */
+  text-align: center;      /* center‐align the label under the swatch */
+  display: flex;           /* allow swatch + label to align nicely */
+  flex-direction: column;  /* stack swatch above text */
+  align-items: center;
+  gap: 1em;
+}
+
+/* 3) The swatch itself: square, colored by --color, slightly rounded */
+.legend .swatch {
+  display: inline-block;           /* allow width/height */
+  width: 0.5em;
+  aspect-ratio: 1 / 1;             /* make it a perfect square */
+  background: var(--color);        /* pulled in by your D3 code */
+  border-radius: 0.2em;           /* slight rounding; use 50% for circle */
+}
+
+.container {
+  display: flex;
+  flex: 1;
+  align-items: flex-start; /* space between header and footer */    /* vertically center swatch + text */
+  gap: 10em; /* small space between swatch and text */
+}
+
+&:has(path:hover) {
+  path:not(:hover) {
+    opacity: 0.5;
+  }
+}
+path {
+  transition: 300ms;
+}
+
+/* ---------- highlight colour (change only this line) ---------- */
+.selected {
+  --color: oklch(60% 0.45 0) !important;  /* ← pick any tone you like */
+}
+
+/* slice itself */
+.selected:is(path) {
+  fill: var(--color) !important;          /*  !important overrides inline fill="" */
+  stroke: #fff;
+  stroke-width: 1px;
+}
+
+/* legend row + its swatch */
+.selected:is(li)          { font-weight: 600; }
+.selected:is(li) .swatch  { background: var(--color) !important; }
