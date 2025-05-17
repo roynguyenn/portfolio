@@ -30,9 +30,10 @@
         "description": "What makes an effective visualization of where to buy your groceries? This project goes through the process of creating an effective visualization comparing different grocery stores and their prices."
     },
     {
-        "title": "Illo fugiat alias enim.",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Rerum sequi quia dolor maiores, labore, alias sit dolore illum excepturi nulla, ratione nihil. Commodi labore repellendus impedit repudiandae nemo voluptatem quod nisi harum mollitia dolor, eveniet qui, saepe fugit."
+        "title": "Bike Lurker of Boston",
+        "year": 2025,
+        "image": "https://roynguyenn.github.io/portfolio/images/images/bikelurker.png",
+        "description": "An interactive visualization of bike lanes and bike traffic in Boston."
     },
     {
         "title": "Nobis non repudiandae ipsum!",
